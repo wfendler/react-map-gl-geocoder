@@ -31,6 +31,7 @@ class Geocoder extends PureComponent {
       mapboxApiAccessToken,
       inputValue,
       origin,
+      externalGeocoder,
       zoom,
       placeholder,
       proximity,
@@ -58,6 +59,7 @@ class Geocoder extends PureComponent {
     const options = {
       accessToken: mapboxApiAccessToken,
       origin,
+      externalGeocoder,
       zoom,
       flyTo: false,
       placeholder,
@@ -243,6 +245,7 @@ class Geocoder extends PureComponent {
     mapboxApiAccessToken: PropTypes.string.isRequired,
     inputValue: PropTypes.string,
     origin: PropTypes.string,
+    externalGeocoder: PropTypes.func,
     zoom: PropTypes.number,
     placeholder: PropTypes.string,
     proximity: PropTypes.object,
